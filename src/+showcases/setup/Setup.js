@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Col, Form , FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import axios from 'axios';
+
 import './Setup.css';
+import '../Showcases.css';
 
 class Setup extends Component {
   constructor(props) {
