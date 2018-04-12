@@ -29,14 +29,14 @@ class Select extends Component {
 
     handleClick (){
         console.log('click', this.state);
-        // this.props.history.push('/setup');
+        this.props.history.push('/setup');
     }
 
     render() {
         return (
             <Row>
                 <Col md={6} mdOffset={3}>
-                    <h2>Select</h2>
+                    <h3>Select your Showcase</h3>
                     <FormGroup controlId="formControlsSelect">
                         <FormControl componentClass="select" placeholder="select">
                             {this.state.showcasesItems}
