@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Select from './../+showcases/select/Select'
 import Topics from './../+showcases/topics/Topics'
 import Setup from './../+showcases/setup/Setup'
+import { Navbar, Jumbotron, Button, NavItem, Nav } from 'react-bootstrap';
 
 import logo from './../assets/logo.svg';
 import './App.css';
@@ -11,18 +12,23 @@ class App extends Component {
   render() {
     return (
       <div>
-        <img src={logo} className='App-logo' alt='logo'/>
         <Router>
           <div>
-            <ul>
-              <li>
-                <Link to="/">Select Showcase</Link>
-              </li>
-              <li>
-                <Link to="/setup">Setup Showcase</Link>
-              </li>
-            </ul>
-            <hr />
+            <Navbar>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <img src={logo} className='App-logo' alt='logo'/>
+            </Navbar.Brand>
+            </Navbar.Header>
+              <Nav>
+                <NavItem>
+                  <Link to="/">Select Showcase</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/setup">Setup Showcase</Link>
+                </NavItem>
+              </Nav>
+            </Navbar>
 
             <Route exact path="/" component={Select} />
             <Route path="/setup" component={Setup} />
