@@ -7,15 +7,29 @@ import Setup from './../+showcases/setup/Setup'
 import { Navbar, NavItem, Nav, Col } from 'react-bootstrap';
 
 import logo from './../assets/logo.svg';
+import background from './../assets/background.png';
+
 import './App.css';
 
 class App extends Component {
+  
+  hasNav () {
+    let location = window.location.pathname;
+    console.log(location)
+    return !['/'].includes(location);
+  }
+
   render() {
+    const bg = {
+      backgroundImage: 'url(' + background + ')',
+      backgroundRepeat: 'no-repeat'
+    }
+    console.log(this.props)
     return (
-      <div>
+      <div className="App" style={bg}>
         <Router>
           <div>
-            <Navbar>
+            {this.hasNav() && <Navbar>
             <Navbar.Header>
               <Navbar.Brand>
                 <img src={logo} className='App-logo' alt='logo'/>
@@ -33,7 +47,7 @@ class App extends Component {
                   </NavItem>
                 </LinkContainer>
               </Nav>
-            </Navbar>
+            </Navbar>}
 
             <Route exact path="/" component={Select} />
             <Route path="/setup" component={Setup} />
