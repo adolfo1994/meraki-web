@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 import Select from './../+showcases/select/Select'
 import Topics from './../+showcases/topics/Topics'
 import Setup from './../+showcases/setup/Setup'
-import { Navbar, Jumbotron, Button, NavItem, Nav } from 'react-bootstrap';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 
 import logo from './../assets/logo.svg';
 import './App.css';
@@ -21,12 +22,16 @@ class App extends Component {
             </Navbar.Brand>
             </Navbar.Header>
               <Nav>
-                <NavItem>
-                  <Link to="/">Select Showcase</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/setup">Setup Showcase</Link>
-                </NavItem>
+                <IndexLinkContainer to="/">
+                  <NavItem>
+                    Select Showcase
+                  </NavItem>
+                </IndexLinkContainer>
+                <LinkContainer to="/setup">
+                  <NavItem>
+                    Setup Showcase
+                  </NavItem>
+                </LinkContainer>
               </Nav>
             </Navbar>
 
