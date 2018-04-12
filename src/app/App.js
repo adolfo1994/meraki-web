@@ -4,7 +4,7 @@ import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 import Select from './../+showcases/select/Select'
 import Topics from './../+showcases/topics/Topics'
 import Setup from './../+showcases/setup/Setup'
-import { Navbar, NavItem, Nav } from 'react-bootstrap';
+import { Navbar, NavItem, Nav, Col } from 'react-bootstrap';
 
 import logo from './../assets/logo.svg';
 import './App.css';
