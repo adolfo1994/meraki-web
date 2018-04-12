@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Select from './../+showcases/select/Select'
 import Topics from './../+showcases/topics/Topics'
 import Setup from './../+showcases/setup/Setup'
-import { Navbar, Jumbotron, Button, NavItem, Nav } from 'react-bootstrap';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 
 import logo from './../assets/logo.svg';
 import './App.css';
