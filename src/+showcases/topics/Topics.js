@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Topic from './Topic'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 class Topics  extends Component {
     constructor(props) {
