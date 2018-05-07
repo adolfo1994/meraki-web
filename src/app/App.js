@@ -4,10 +4,10 @@ import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 import Select from './../+showcases/select/Select'
 import Topics from './../+showcases/topics/Topics'
 import Setup from './../+showcases/setup/Setup'
-import { Navbar, NavItem, Nav, Col } from 'react-bootstrap';
+import { Navbar, NavItem, Nav, Col, Row } from 'react-bootstrap';
 
-import logo from './../assets/logo.svg';
-import background from './../assets/background.png';
+import logo from './../assets/logo-white.jpeg';
+import background from './../assets/background.jpg';
 
 import './App.css';
 
@@ -22,32 +22,37 @@ class App extends Component {
   render() {
     const bg = {
       backgroundImage: 'url(' + background + ')',
-      backgroundRepeat: 'no-repeat'
+      backgroundSize: 'cover'
     }
     console.log(this.props)
     return (
       <div className="App" style={bg}>
+        <Row className="brand">
+          <Col>
+            <img src={logo} className='App-logo' alt='logo'/>
+          </Col>
+        </Row>
         <Router>
           <div>
-            {this.hasNav() && <Navbar>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <img src={logo} className='App-logo' alt='logo'/>
-            </Navbar.Brand>
-            </Navbar.Header>
+            <Navbar>
               <Nav>
                 <IndexLinkContainer to="/">
                   <NavItem>
-                    Select Showcase
+                    Productos
                   </NavItem>
                 </IndexLinkContainer>
                 <LinkContainer to="/setup">
                   <NavItem>
-                    Setup Showcase
+                    Recetas
+                  </NavItem>
+                </LinkContainer>
+                <LinkContainer to="/setup">
+                  <NavItem>
+                    Contacto
                   </NavItem>
                 </LinkContainer>
               </Nav>
-            </Navbar>}
+            </Navbar>
 
             <Route exact path="/" component={Select} />
             <Route path="/setup" component={Setup} />
