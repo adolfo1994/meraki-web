@@ -2,7 +2,7 @@
   "name": "meraki-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adolfo1994.github.io/meraki-web",
+  "homepage": "https://adolfo1994.github.io/meraki-web/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "3",

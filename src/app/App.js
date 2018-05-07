@@ -32,7 +32,7 @@ class App extends Component {
             <img src={logo} className='App-logo' alt='logo'/>
           </Col>
         </Row>
-        <Router>
+        <Router basename="/meraki-web">
           <div>
             <Navbar>
               <Nav>
